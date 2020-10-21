@@ -1,0 +1,82 @@
+@btn-cls-prefix: ~"@{cls-prefix}btn";
+.@{btn-cls-prefix} {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 8px 18px;
+  font-size: @font-size;
+  line-height: 1;
+  border-radius: 4px;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, border 0.2s ease,
+    color 0.2s ease, -webkit-box-shadow 0.2s ease;
+  outline: 0;
+  &-default {
+    color: @text-color;
+    background-color: @white;
+    border-color: rgba(150, 160, 180, 0.3);
+    &:hover {
+      color: @primary-color;
+      border-color: @primary-color;
+    }
+  }
+  &-primary {
+    color: #fff;
+    background-color: @primary-color;
+    border-color: @primary-color;
+    &:hover {
+      color: #fff;
+      background-color: fade(@primary-color, 85%);
+      border-color: fade(@primary-color, 85%);
+    }
+  }
+  &-success {
+    color: #fff;
+    background-color: @success-color;
+    border-color: @success-color;
+    &:hover {
+      color: #fff;
+      background-color: fade(@success-color, 85%);
+      border-color: fade(@success-color, 85%);
+    }
+  }
+  &-info {
+    color: #fff;
+    background-color: @info-color;
+    border-color: @info-color;
+    &:hover {
+      color: #fff;
+      background-color: fade(@info-color, 85%);
+      border-color: fade(@info-color, 85%);
+    }
+  }
+  &-warning {
+    color: #fff;
+    background-color: @warning-color;
+    border-color: @warning-color;
+    &:hover {
+      color: #fff;
+      background-color: fade(@warning-color, 85%);
+      border-color: fade(@warning-color, 85%);
+    }
+  }
+  &-danger {
+    color: #fff;
+    background-color: @error-color;
+    border-color: @error-color;
+    &:hover {
+      color: #fff;
+      background-color: fade(@error-color, 85%);
+      border-color: fade(@error-color, 85%);
+    }
+  }
+  &:active {
+    box-shadow: inset 0px 0px 9px 11px rgba(0, 0, 0, 0.125);
+  }
+}

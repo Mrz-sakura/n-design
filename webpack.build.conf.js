@@ -3,7 +3,7 @@
  */
 const path = require("path");
 const webpack = require("webpack");
-const pkg = require("../package.json");
+const pkg = require("./package.json");
 
 function resolve(dir) {
   return path.join(__dirname, "..", dir);
@@ -111,9 +111,9 @@ module.exports = {
     },
   },
   plugins: [
-    new UglifyJsPlugin({
-      parallel: true,
-      sourceMap: true,
-    })
+    // new UglifyJsPlugin({
+    //   parallel: true,
+    //   sourceMap: true,
+    // })
   ],
 };

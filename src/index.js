@@ -1,10 +1,15 @@
+import NButton from "./components/Button";
+console.log(11111);
+const Components = {
+  NButton,
+};
+
 const install = function(Vue, opts = {}) {
   if (install.installed) return;
 
-  //   Object.keys(iview).forEach((key) => {
-  //     Vue.component(key, iview[key]);
-  //   });
-
+  for (let i in Components) {
+    Vue.component(i, Components[i]);
+  }
   //   Vue.prototype.$Loading = LoadingBar;
   //   Vue.prototype.$Message = Message;
   //   Vue.prototype.$Modal = Modal;
@@ -14,4 +19,6 @@ const install = function(Vue, opts = {}) {
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
-export default {};
+
+Components.install = install;
+export default Components;
